@@ -74,7 +74,9 @@ Object.defineProperty(document.body.style, 'transform', {
       ],
     },
     "files": [
-      "src/setup-jest.ts"
+      "src/polyfills.ts",
+      "src/setup-jest.ts" -- Add
+      "src/test.ts" -- Remove
     ],
     "include": [
       "src/**/*.spec.ts",
@@ -82,6 +84,8 @@ Object.defineProperty(document.body.style, 'transform', {
     ]
   }
   
+# Rename test.ts to karmaTest.ts
+This will ensure that there are no conflicts with karma and jest
 
 # Create jest.config.ts in root
 Note: I am following the provided example with a small tweak to setup files 
