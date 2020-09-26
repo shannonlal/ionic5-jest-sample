@@ -1,0 +1,7 @@
+{
+  "name": "ionic5-jest-sample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
