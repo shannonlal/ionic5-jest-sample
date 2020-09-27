@@ -10,7 +10,7 @@ import {ExhangeRateService} from './service/exchange-rate.service';
 })
 export class HomePage {
 
-  constructor( ) {
+  constructor( private exchangeRateService: ExhangeRateService ) {
     //this.getExchangeRates();
   }
 

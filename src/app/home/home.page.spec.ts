@@ -21,7 +21,7 @@ describe('HomePage Page', () => {
   let component: TestedComponent;
 
   beforeEach(() => {
-    component = new TestedComponent();
+    component = new TestedComponent(mockExchangeRateService);
   });
 
   it('should create', () => {
