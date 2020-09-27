@@ -5,7 +5,10 @@
     "types": [
       "jest",
       "node"
-    ]
+    ],
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "allowJs": true
   },
   "files": [
     "src/polyfills.ts",
