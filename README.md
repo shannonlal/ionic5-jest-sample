@@ -115,7 +115,7 @@ module.exports = {
       '^pages/(.*)$': '<rootDir>/src/pages/$1',
       '^theme/(.*)$': '<rootDir>/src/themse/$1',
     },
-    transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
+    transformIgnorePatterns: ['node_modules/(?!@ngrx|@ionic)'],
     snapshotSerializers: [
       'jest-preset-angular/build/AngularSnapshotSerializer.js',
       'jest-preset-angular/build/HTMLCommentSerializer.js',
