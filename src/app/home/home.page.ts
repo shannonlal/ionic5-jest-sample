@@ -8,22 +8,19 @@ import {ExhangeRateService} from './service/exchange-rate.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit{
+export class HomePage {
 
   constructor( private exchangeRateService: ExhangeRateService) {
-    this.getExchangeRates();
+    //this.getExchangeRates();
   }
 
   public exchangeRate: ExchangeRates;
 
   public rates: {key: string; value: string}[] = [];
 
-  ngOnInit(): void {
-  }
+  //public getExchangeRates() {
 
-  private getExchangeRates() {
-
-    this.exchangeRateService.getExchangeRates().subscribe( ( exchange: ExchangeRates ) => {
+  /*  this.exchangeRateService.getExchangeRates().subscribe( ( exchange: ExchangeRates ) => {
       this.exchangeRate = exchange;
 
       const rateKeys = Object.keys(this.exchangeRate.rates);
@@ -34,7 +31,7 @@ export class HomePage implements OnInit{
 
       console.log( 'rate keys', this.rates);
 
-    });
-  }
+    });*/
+  //}
 
 }
