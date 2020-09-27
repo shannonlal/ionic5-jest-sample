@@ -1,5 +1,4 @@
 import { ExhangeRateService } from './exchange-rate.service';
-import { HttpClient } from '@angular/common/http';
 import { of as ObservableOf } from 'rxjs';
 import { ExchangeRates } from '../models';
 
@@ -80,20 +79,20 @@ describe( 'Exchange Rate Service Test', () => {
             }
         };
         const httpMockClient = {
-            get: ObservableOf(exchangeRate)
+            get: jest.fn()
         };
 
         const service = new ExhangeRateService(httpMockClient as any);
 
         expect( service ).toBeDefined();
         try{
+            httpMockClient.get.mockReturnValueOnce(ObservableOf(exchangeRate));
             const rates: ExchangeRates = await service.getExchangeRates().toPromise();
             expect( rates ).toBeDefined();
             expect( rates.base ).toBe('USD');
             expect( rates.time_last_updated ).toBe(1601078645);
         }catch ( err ){
-          console.log('Unexpected err', err);
-            expect(err).toBeUndefined();
+          expect(err).toBeUndefined();
         }
 
     });
